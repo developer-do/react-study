@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import MyComponent from './MyComponent';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
- 
   render() {
-    const name = "dohyun";
+    const text = "당신은 어썸한가요?";
+    const condition = true;
+    const style = {
+      backgroundColor: 'gray',
+      border: '1px solid black',
+      height: Math.round(Math.random() * 300) + 50,
+      width: Math.round(Math.random() * 300) + 50,
+      WebkitTransition: 'all',
+      MozTransition: 'all',
+      msTransition: 'all'
+    };
+
     return (
-      <MyComponent name={name} />
+      <div>
+        <h1>리액트 안녕!</h1>
+        <h2>{text}</h2>
+        {condition && '보여주세요'}
+        <div style={style}></div>
+      </div>
     );
   }
 }
-
-// props가 지정되지 않았을 때 기본 props
-MyComponent.defaultProps = {
-  name: '기본 이름',
-};
 
 export default App;
