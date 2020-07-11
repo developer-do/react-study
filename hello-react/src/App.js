@@ -1,26 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const text = "당신은 어썸한가요?";
+    const condition = true;
+    const style = {
+      backgroundColor: 'gray',
+      border: '1px solid black',
+      height: Math.round(Math.random() * 300) + 50,
+      width: Math.round(Math.random() * 300) + 50,
+      WebkitTransition: 'all',
+      MozTransition: 'all',
+      msTransition: 'all'
+    };
+
+    return (
+      <div>
+        <h1>리액트 안녕!</h1>
+        <h2>{text}</h2>
+        {condition && '보여주세요'}
+        <div style={style}></div>
+      </div>
+    );
+  }
 }
 
 export default App;
