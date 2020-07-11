@@ -4,14 +4,10 @@ import MyComponent from './MyComponent';
 class App extends Component {
   render() {
     return (
-      <MyComponent />
+      <MyComponent name="React" age={29}/>
     )
   }
 }
 
-
-MyComponent.defaultProps = {
-  name: '기본 이름',
-}
 
 export default App;
