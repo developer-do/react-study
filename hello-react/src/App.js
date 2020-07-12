@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MyComponent from './MyComponent';
 import EventPractice from './EventPractice';
-import ValidationSample from './ValidationSample';
 
 
 const onClick = () => {
