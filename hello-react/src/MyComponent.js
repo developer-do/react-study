@@ -8,7 +8,8 @@ class MyComponent extends Component {
 
     static propTypes = {
         name: propTypes.string, // name props 타입을 문자열로 설정합니다. 
-        age: propTypes.number.isRequired // 필수적으로 존재해야 하며, 숫자입니다.
+        age: propTypes.number.isRequired, // 필수적으로 존재해야 하며, 숫자입니다.
+        onClick: propTypes.func
     }
 
     state = {
@@ -35,6 +36,7 @@ class MyComponent extends Component {
                     })
                 }
                 }>빼기</button>
+                <button onClick={this.props.onClick}>onClick</button>
             </div>
         );
     }
