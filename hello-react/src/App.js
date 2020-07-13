@@ -3,6 +3,7 @@ import MyComponent from './MyComponent';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
+import IterationSample from './IterationSample';
 
 
 const onClick = () => {
@@ -20,9 +21,10 @@ class App extends Component {
         <hr />
         <ScrollBox ref={(ref) => {
           this.scrollBox = ref;
-          console.log(ref);
         }}/>
         <button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>
+
+        <IterationSample />
       </div>
     );
   }
